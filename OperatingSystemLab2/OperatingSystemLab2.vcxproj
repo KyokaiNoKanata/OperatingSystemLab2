@@ -147,12 +147,16 @@
     <QtUic Include="ElevatorUserInterface.ui" />
     <QtUic Include="MainWindow.ui" />
     <QtMoc Include="MainWindow.h" />
+    <ClCompile Include="ElevatorThread.cpp" />
     <ClCompile Include="ElevatorUserInterface.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="ElevatorUserInterface.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ElevatorThread.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
