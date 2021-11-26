@@ -1,16 +1,19 @@
 #pragma once
 
-#include <QWidget>
-#include "ui_ElevatorUserInterface.h"
+#pragma once
 
-class ElevatorUserInterface : public QWidget
+#include <QWidget>
+
+#include "ui_ElevatorUserInterface.h"
+#include "ElevatorThread.h"
+#include "ElevatorUserInterface.h"
+
+class ElevatorUserInterface :public QWidget
 {
 	Q_OBJECT
-
 public:
 	ElevatorUserInterface(QWidget* parent = Q_NULLPTR);
 	~ElevatorUserInterface();
-
 private:
 	Ui::ElevatorUserInterface ui;
 };

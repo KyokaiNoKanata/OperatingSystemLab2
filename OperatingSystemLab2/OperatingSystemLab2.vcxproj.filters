@@ -51,6 +51,9 @@
     <QtMoc Include="ElevatorUserInterface.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="ElevatorThread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="ElevatorUserInterface.ui">
@@ -58,8 +61,13 @@
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ElevatorThread.h">
+    <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OperatingSystemLab2.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

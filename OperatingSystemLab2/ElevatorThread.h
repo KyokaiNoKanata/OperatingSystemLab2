@@ -1,14 +1,15 @@
 #pragma once
 
 #include<QThread>
-#include<QString>
 
 #include "ElevatorUserInterface.h"
 
-class ElevatorThread :
-	public QThread
+class ElevatorThread :public QThread
 {
+	Q_OBJECT
 public:
+	ElevatorThread(QObject* parent = Q_NULLPTR);
+private:
 	void run();
 };
 
