@@ -3,6 +3,7 @@
 #include <QDialog>
 #include <QPushButton>
 #include "ui_ElevatorUserInterface.h"
+#include "Command.h"
 
 class ElevatorUserInterface :public QDialog
 {
@@ -13,12 +14,17 @@ public:
 	~ElevatorUserInterface();
 
 signals:
-	void SendCommand(QString qs);
+	void SendCommand(Command c);
 
-private slots:
+public slots:
 	void ElevatorClose();
 	void ElevatorOpen();
+	void Floor1Clicked();
+	void Floor2Clicked();
+	void Floor3Clicked();
+	void Floor4Clicked();
 
 private:
 	Ui::ElevatorUserInterface ui;
+	Command* command;
 };

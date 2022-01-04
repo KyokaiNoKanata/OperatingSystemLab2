@@ -2,6 +2,7 @@
 
 #include <QWidget>
 #include "ui_BuildingUserInterface.h"
+#include "Command.h"
 
 class BuildingUserInterface : public QWidget
 {

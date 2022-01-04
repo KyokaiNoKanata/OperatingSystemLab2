@@ -164,6 +164,7 @@
     <QtUic Include="MainWindow.ui" />
     <QtMoc Include="MainWindow.h" />
     <ClCompile Include="BuildingUserInterface.cpp" />
+    <ClCompile Include="Command.cpp" />
     <ClCompile Include="Elevator.cpp" />
     <ClCompile Include="ElevatorUserInterface.cpp" />
     <ClCompile Include="MainWindow.cpp" />
@@ -171,7 +172,8 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="BuildingUserInterface.h" />
-    <ClInclude Include="Elevator.h" />
+    <ClInclude Include="Command.h" />
+    <QtMoc Include="Elevator.h" />
     <QtMoc Include="ElevatorUserInterface.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
