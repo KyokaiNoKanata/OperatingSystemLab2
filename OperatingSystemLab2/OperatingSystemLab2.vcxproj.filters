@@ -46,10 +46,10 @@
     <ClCompile Include="ElevatorUserInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BuildingUserInterface.cpp">
+    <ClCompile Include="Command.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Command.cpp">
+    <ClCompile Include="BuildingInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -70,10 +70,10 @@
     <QtMoc Include="ElevatorUserInterface.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="BuildingUserInterface.h">
+    <QtMoc Include="Elevator.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="Elevator.h">
+    <QtMoc Include="BuildingInterface.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -81,7 +81,7 @@
     <QtUic Include="ElevatorUserInterface.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="BuildingUserInterface.ui">
+    <QtUic Include="BuildingInterface.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

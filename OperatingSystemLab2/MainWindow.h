@@ -2,7 +2,9 @@
 
 #include <QtWidgets/QMainWindow>
 #include <QObject>
-#include <vector>
+#include <set>
+#include <QTimer>
+#include <algorithm>
 
 #include "ui_MainWindow.h"
 #include "Command.h"
@@ -15,13 +17,22 @@ class MainWindow :public QMainWindow
 public:
 	MainWindow(QWidget* parent = Q_NULLPTR);
 
+signals:
+	void ElevatorStart(int c);
+
 public slots:
-	void ReceiveMessage(Command c);
+	void ReceiveCommand(Command c);
 	void ReceiveElevatorStatus(int position, int status, int door_status);
+	void GiveCommand(int postion, int status);
 
 private:
 	Ui::MainWindowClass ui;
 	ElevatorUserInterface* eui;
 	Elevator* elevator;
 	QThread* ElevatorThread;
+	QTimer* timer;
+	std::set<Command>Commands;
+	bool ElevatorStopped;
+	int Position;
+	int Status;
 };

@@ -2,9 +2,8 @@
 
 Elevator::Elevator()
 {
-
 	Position = 0;
-	Status = 0;
+	Status = STILL;
 	DoorStatus = DOOR_CLOSE;
 }
 
@@ -13,15 +12,24 @@ void Elevator::ElevatorRun()
 	qDebug() << "a";
 }
 
-void Elevator::move(int direction)
+void Elevator::Update()
 {
+	qDebug() << DoorStatus;
+	emit SendElevatorStatus(Position, Status, DoorStatus);
+}
+
+void Elevator::Move(int direction)
+{
+	Update();
 	if (direction == UP)
 	{
+		Status = MOVING_UP;
 		QThread::sleep(1);
 		Position++;
 	}
 	else
 	{
+		Status = MOVING_DOWN;
 		QThread::sleep(1);
 		Position--;
 	}
@@ -30,25 +38,29 @@ void Elevator::move(int direction)
 void Elevator::DoorOpen()
 {
 	DoorStatus = DOOR_OPEN;
-	emit SendElevatorStatus(Position, Status, DoorStatus);
+	Update();
 	QThread::sleep(1);
-	emit SendElevatorStatus(Position, Status, DoorStatus);
 	DoorStatus = DOOR_CLOSE;
 }
 
-void Elevator::ReceriveCommand(Command c)
+void Elevator::ReceiveCommand(int c)
 {
-	//emit SendElevatorStatus();
-	switch (c.CommandType)
+	Update();
+	switch (c)
 	{
-	case OPEN:
+	case(STILL):
 		DoorOpen();
 		break;
-	case CLOSE:
+	case(MOVING_UP):
+		Move(UP);
 		break;
-	default:
-		Commands.insert(c);
+	case(MOVING_DOWN):
+		Move(DOWN);
+		break;
+	case(STOP):
+		Status = STILL;
 		break;
 	}
-	emit SendElevatorStatus(Position, Status, DoorStatus);
+	Update();
+	Ready(Position, Status);
 }

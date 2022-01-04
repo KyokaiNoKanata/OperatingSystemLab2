@@ -159,11 +159,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <QtRcc Include="MainWindow.qrc" />
-    <QtUic Include="BuildingUserInterface.ui" />
+    <QtUic Include="BuildingInterface.ui" />
     <QtUic Include="ElevatorUserInterface.ui" />
     <QtUic Include="MainWindow.ui" />
     <QtMoc Include="MainWindow.h" />
-    <ClCompile Include="BuildingUserInterface.cpp" />
+    <ClCompile Include="BuildingInterface.cpp" />
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="Elevator.cpp" />
     <ClCompile Include="ElevatorUserInterface.cpp" />
@@ -171,7 +171,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="BuildingUserInterface.h" />
+    <QtMoc Include="BuildingInterface.h" />
     <ClInclude Include="Command.h" />
     <QtMoc Include="Elevator.h" />
     <QtMoc Include="ElevatorUserInterface.h" />

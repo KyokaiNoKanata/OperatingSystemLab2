@@ -1,7 +1,6 @@
 #pragma once
 
 #define MOVE_TO_COMMAND 2
-#define BUILDING_REQUEST 3
 #define OPEN 1
 #define CLOSE 0
 

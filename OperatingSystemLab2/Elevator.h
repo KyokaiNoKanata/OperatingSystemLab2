@@ -14,6 +14,7 @@
 #define DOOR_OPEN 1
 #define UP 1
 #define DOWN 0
+#define STOP 3
 
 class Elevator :public QObject
 {
@@ -24,15 +25,16 @@ public:
 
 signals:
 	void SendElevatorStatus(int position, int status, int door_status);
+	void Ready(int floor, int status);
 
-public slots:
-	void ReceriveCommand(Command c);
+; public slots:
+	void ReceiveCommand(int c);
+	void Update();
 
 private:
 	int Position;
 	int Status;
 	int DoorStatus;
-	std::set<Command>Commands;
-	void move(int direction);
+	void Move(int direction);
 	void DoorOpen();
 };
