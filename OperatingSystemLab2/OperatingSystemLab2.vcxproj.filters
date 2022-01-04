@@ -40,28 +40,21 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Elevator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="ElevatorUserInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ElevatorThread.cpp">
+    <ClCompile Include="BuildingUserInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="ElevatorUserInterface.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="ElevatorThread.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-  </ItemGroup>
-  <ItemGroup>
-    <QtUic Include="ElevatorUserInterface.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Elevator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -69,5 +62,21 @@
     <ResourceCompile Include="OperatingSystemLab2.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ElevatorUserInterface.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="BuildingUserInterface.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ElevatorUserInterface.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="BuildingUserInterface.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
 </Project>
