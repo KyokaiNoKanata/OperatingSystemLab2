@@ -10,6 +10,8 @@
 #include "Command.h"
 #include "Elevator.h"
 #include "ElevatorUserInterface.h"
+#include "BuildingInterface.h"
+#include "InterfaceInteract.h"
 
 class MainWindow :public QMainWindow
 {
@@ -28,8 +30,19 @@ public slots:
 private:
 	Ui::MainWindowClass ui;
 	ElevatorUserInterface* eui;
+	BuildingInterface* bi;
 	Elevator* elevator;
 	QThread* ElevatorThread;
+	QThread* ElevatorInterfaceThread;
+	InterfaceInteract* ElevatorInterfaceObject;
+	QThread* Floor1Thread;
+	QThread* Floor2Thread;
+	QThread* Floor3Thread;
+	QThread* Floor4Thread;
+	InterfaceInteract* Floor1Object;
+	InterfaceInteract* Floor2Object;
+	InterfaceInteract* Floor3Object;
+	InterfaceInteract* Floor4Object;
 	QTimer* timer;
 	std::set<Command>Commands;
 	bool ElevatorStopped;

@@ -2,14 +2,9 @@
 
 Elevator::Elevator()
 {
-	Position = 0;
+	Position = 1;
 	Status = STILL;
 	DoorStatus = DOOR_CLOSE;
-}
-
-void Elevator::ElevatorRun()
-{
-	qDebug() << "a";
 }
 
 void Elevator::Update()
@@ -24,12 +19,14 @@ void Elevator::Move(int direction)
 	if (direction == UP)
 	{
 		Status = MOVING_UP;
+		Update();
 		QThread::sleep(1);
 		Position++;
 	}
 	else
 	{
 		Status = MOVING_DOWN;
+		Update();
 		QThread::sleep(1);
 		Position--;
 	}

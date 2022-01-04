@@ -4,7 +4,7 @@ ElevatorUserInterface::ElevatorUserInterface(QWidget* parent)
 	: QDialog(parent)
 {
 	ui.setupUi(this);
-	command = new Command(0, 0, 0, 0);
+	command = new Command();
 	connect(ui.Open, SIGNAL(clicked()), this, SLOT(ElevatorOpen()));
 	connect(ui.Close, SIGNAL(clicked()), this, SLOT(ElevatorClose()));
 	connect(ui.Floor1, SIGNAL(clicked()), this, SLOT(Floor1Clicked()));

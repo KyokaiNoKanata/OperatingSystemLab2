@@ -167,6 +167,7 @@
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="Elevator.cpp" />
     <ClCompile Include="ElevatorUserInterface.cpp" />
+    <ClCompile Include="InterfaceInteract.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -175,6 +176,7 @@
     <ClInclude Include="Command.h" />
     <QtMoc Include="Elevator.h" />
     <QtMoc Include="ElevatorUserInterface.h" />
+    <QtMoc Include="InterfaceInteract.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
