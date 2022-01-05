@@ -101,6 +101,7 @@ void MainWindow::GiveCommand(int position, int status)
 	}
 	else
 	{
+		ElevatorStopped = 0;
 		int move = 0;
 		bool open = 0;
 		bool erase_flag = 0;
